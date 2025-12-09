@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'Qurova';
+  src: url('Qurova-DEMO.ttf') format('truetype');
+}
+
+body {
+  background: linear-gradient(to bottom, #1C1424, #2A133C);
+  font-family: 'Qurova', sans-serif;
+  color: #fff;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.title-gradient {
+  font-size: 52px;
+  background: linear-gradient(to bottom, #FFFFFF, #8A38F5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 34px;
+  margin-top: 10px;
+}
+
+.custom-btn {
+  width: 111px;
+  height: 37px;
+  border-radius: 16px;
+  background: linear-gradient(to bottom, #8359D7, #452F71);
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-family: 'Qurova', sans-serif;
+}
+
+.section-title {
+  margin-top: 120px;
+  font-size: 52px;
+  background: linear-gradient(to bottom, #FFFFFF, #8A38F5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.carousel-card {
+  width: 372px;
+  height: 432px;
+  border-radius: 39px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  margin: auto;
+}
+
+.card-img-top {
+  height: 50%;
+  object-fit: cover;
+}
+
+.card-bottom {
+  height: 50%;
+  background: radial-gradient(circle, #8359D7 0%, #452F71 100%);
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+.carousel-inner {
+  display: flex;
+  align-items: center;
+}
+
+.nav-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev.nav-btn {
+  left: 5%;
+}
+
+.carousel-control-next.nav-btn {
+  right: 5%;
+}
