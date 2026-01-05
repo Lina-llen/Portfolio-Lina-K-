@@ -4,13 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio Lina Khial</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1 class="title-gradient">PORTFOLIO</h1>
   <div class="subtitle">Lina Khial</div>
-
+<br>
   <div class="d-flex justify-content-center gap-4 mt-4">
     <a href="apropos.html"><button class="custom-btn">À propos</button></a>
     <a href="contact.html"><button class="custom-btn">Contact</button></a>
@@ -18,79 +17,34 @@
 
   <h2 class="section-title">Mes projets</h2>
 
-  <div id="projectCarousel" class="carousel slide" data-bs-ride="false">
-    <div class="carousel-inner">
-        <!-- Carte 1 -->
-        <div class="carousel-item active">
-            <a href="Horizen.html" class="carousel-card-link">
-                <div class="carousel-card">
-                    <div class="card-img-area">
-                        <img src="/Projets Figma/Horizen/Logo-Final.png" alt="Horizen">
-                    </div>
-                    <div class="card-content">
-                        <p>Horizen est une application de planification de voyages.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <!-- Carte 2 -->
-        <div class="carousel-item">
-            <a href="projet2.html" class="carousel-card-link">
-                <div class="carousel-card">
-                    <div class="card-img-area">
-                        <img src="img2.jpg" alt="Projet 2">
-                    </div>
-                    <div class="card-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <!-- Carte 3 -->
-        <div class="carousel-item">
-            <a href="projet3.html" class="carousel-card-link">
-                <div class="carousel-card">
-                    <div class="card-img-area">
-                        <img src="img3.jpg" alt="Projet 3">
-                    </div>
-                    <div class="card-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <!-- Carte 4 -->
-        <div class="carousel-item">
-            <a href="projet4.html" class="carousel-card-link">
-                <div class="carousel-card">
-                    <div class="card-img-area">
-                        <img src="img4.jpg" alt="Projet 4">
-                    </div>
-                    <div class="card-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-    </div>
-
-    <!-- Boutons précédent / suivant -->
-    <button class="carousel-control-prev round-btn" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon arrow-icon"></span>
-    </button>
-
-    <button class="carousel-control-next round-btn" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon arrow-icon"></span>
-    </button>
-</div>
+  <div class="carousel-wrapper">
+  <button class="nav-btn left" id="prev">&#10094;</button>
+  <button class="nav-btn right" id="next">&#10095;</button>
 
 
+  <div class="carousel">
+    <a class="card" href="projet1.html">
+        <img src="Projets Figma/Horizen/Logo-Final.png" alt="Projet 1" class="image"/>
+      <div class="text">Lorem ipsum dolor sit amet</div>
+    </a>
+    <a class="card" href="projet2.html">
+        <img src="Projets Figma/Horizen/Logo-Final.png" alt="Projet 2" class="image"/>
+      <div class="text">Lorem ipsum dolor sit amet</div>
+    </a>
+    <a class="card" href="projet3.html">
+        <img src="Projets Figma/Horizen/Logo-Final.png" alt="Projet 3" class="image"/>
+      <div class="text">Lorem ipsum dolor sit amet</div>
+    </a>
+    <a class="card" href="projet4.html">
+        <img src="Projets Figma/Horizen/Logo-Final.png" alt="Projet 4" class="image"/>
+      <div class="text">Lorem ipsum dolor sit amet</div>
+    </a>
+    <a class="card" href="projet5.html">
+        <img src="Projets Figma/Horizen/Logo-Final.png" alt="Projet 5" class="image"/>
+      <div class="text">Lorem ipsum dolor sit amet</div>
+    </a>
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+    <script src="script.js"></script>
 </body>
 </html>
