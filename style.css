@@ -16,7 +16,7 @@ body {
 .title-gradient {
   font-size: 52px;
   background: linear-gradient(to bottom, #FFFFFF, #8A38F5);
-  -webkit-background-clip: text;
+
   -webkit-text-fill-color: transparent;
 }
 
@@ -40,7 +40,6 @@ body {
   margin-top: 120px;
   font-size: 52px;
   background: linear-gradient(to bottom, #FFFFFF, #8A38F5);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -85,7 +84,7 @@ body {
 .card .text {
   height: 50%;
   background: radial-gradient(circle, #8359D7, #452F71);
-  opacity: ;
+  opacity: 2;
   color: white;
   display: flex;
   align-items: center;
