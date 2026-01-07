@@ -1,3 +1,22 @@
+const container = document.getElementById("particles");
+
+for (let i = 0; i < 80; i++) {
+  const p = document.createElement("div");
+  p.classList.add("particle");
+
+  const size = Math.random() * 4 + 3;
+  p.style.width = size + "px";
+  p.style.height = size + "px";
+
+  p.style.left = Math.random() * 100 + "vw";
+  p.style.top = 100 + Math.random() * 20 + "vh";
+
+  p.style.animationDuration = 5 + Math.random() * 10 + "s";
+  p.style.animationDelay = Math.random() * -20 + "s";
+
+  container.appendChild(p);
+}
+
 const cards = document.querySelectorAll(".card");
 let current = 2;
 const total = cards.length;

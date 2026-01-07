@@ -26,9 +26,9 @@ body {
 }
 
 .custom-btn {
-  width: 111px;
-  height: 37px;
-  border-radius: 16px;
+  width: 130px;
+  height: 45px;
+  border-radius: 25px;
   background: linear-gradient(to bottom, #8359D7, #452F71);
   color: #fff;
   border: none;
@@ -43,6 +43,35 @@ body {
   background: linear-gradient(to bottom, #FFFFFF, #8A38F5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+#particles {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgb(182, 107, 211);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgb(182, 107, 211), 0 0 20px rgb(182, 107, 211);
+  opacity: 0.8;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-120vh) scale(0.2);
+    opacity: 0;
+  }
 }
 
 .carousel-wrapper {
@@ -64,6 +93,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .card {
     position: absolute;
     top: 0;
@@ -79,10 +109,12 @@ body {
     background: white;
     transition: transform 0.4s ease, filter 0.4s ease;
 }
+
 .card .image {
   height: 60%;
   background: #ccc;
 }
+
 .card .text {
   height: 50%;
   background: radial-gradient(circle, #8359D7, #452F71);
@@ -93,6 +125,7 @@ body {
   padding: 20px;
   text-align: center;
 }
+
 .card.center {
   transform: translateX(-50%) scale(1);
   opacity: 2;
@@ -100,12 +133,14 @@ body {
   pointer-events: auto;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
+
 .card.left {
   transform: translateX(calc(-50% - 240px)) scale(0.85);
   opacity: 2;
   z-index: 2;
   filter: grayscale(70%);
 }
+
 .card.right {
   transform: translateX(calc(-50% + 240px)) scale(0.85);
   opacity: 2;
