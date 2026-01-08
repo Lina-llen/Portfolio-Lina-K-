@@ -3,7 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1 - Portfolio Lina Khial</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <title>Horizen - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-nav">
+        <a href="index.html" class="nav-link">← Retour à l'accueil</a>
+        <div class="badges-container">
+            <span class="badge">UI/UX</span>
+            <span class="badge">Logo</span>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <img src="Projets Figma/Horizen/App-icon.png" alt="Icone Horizen" class="app-icon">
+        <div class="hero-text">
+            <h1 class="title-gradient">Horizen</h1>
+            <p class="FS-5 L-space">Horizen est une application de planification de voyage innovante conçue pour simplifier l'organisation de vos aventures. De la gestion d'itinéraires complexes à la découverte de lieux secrets, elle centralise tous vos besoins de voyageur dans une interface fluide et intuitive.</p>
+        </div>
+    </section>
+
+    <div class="details-container">
+        <details id="charte-details">
+            <summary class>Cliquez pour dérouler la Charte Graphique</summary>
+            <div class="full-width-img-container"><img src="Projets Figma/Horizen/Charte graphique/Charte-grahpique-HORIZEN-cover.png" class="full-width-img"></div>
+            <div class="full-width-img-container"><img src="Projets Figma/Horizen/Charte graphique/Charte-grahpique-HORIZEN-sommaire.png" class="full-width-img"></div>
+            <div class="full-width-img-container"><img src="Projets Figma/Horizen/Charte graphique/Charte-grahpique-HORIZEN-intro.png" class="full-width-img"></div>
+            <div class="full-width-img-container"><img src="Projets Figma/Horizen/Charte graphique/Charte-grahpique-HORIZEN-logo.png" class="full-width-img"></div>
+            <div class="full-width-img-container"><img src="Projets Figma/Horizen/Charte graphique/Charte-grahpique-HORIZEN-logo-2.png" class="full-width-img"></div>
+            <div class="full-width-img-container"><img src="Projets Figma/Horizen/Charte graphique/Charte-grahpique-HORIZEN-Logo-3.png" class="full-width-img"></div>
+            <div class="full-width-img-container"><img src="Projets Figma/Horizen/Charte graphique/Charte-grahpique-HORIZEN-couleurs.png" class="full-width-img"></div>
+            <div class="full-width-img-container"><img src="Projets Figma/Horizen/Charte graphique/Charte-grahpique-HORIZEN-typographies.png" class="full-width-img"></div>
+            <div class="full-width-img-container"><img src="Projets Figma/Horizen/Charte graphique/Charte-grahpique-HORIZEN-typographies-2.png" class="full-width-img"></div>
+            <div style="padding: 40px 0;">
+                <p class="close-charte-btn FS-5" onclick="closeCharte()">
+                    <span class="chevron-up"></span> Refermer la charte graphique
+                </p>
+            </div>
+        </details>
+    </div>
+
+    <h2 class="title-gradient FS-1" id="section-title">Maquette Web</h2>
+
+<div class="mockup-container" onclick="openViewer()">
+    <img src="Projets Figma/Horizen/Horizen-mockup.png" alt="Aperçu Horizen">
+    <div class="mockup-overlay">
+        <span class="overlay-text FS-5">VOIR L'INTERFACE COMPLÈTE</span>
+    </div>
+</div>
+
+<div id="fullscreen-viewer">
+    <button class="close-viewer" onclick="closeViewer()">× Quitter la vue</button>
+    <img src="Projets Figma/Horizen/Landing-page-full.png" alt="Landing Page Horizen">
+</div>
+<section class="text-spacing FS-5">
+    <h2 class="title-gradient">Notes sur le projet</h2>
+    <p>
+        Horizen est un projet fictif réalisé lors d’une immersion professionnelle. J’y ai conçu l’identité visuelle et l’expérience utilisateur d’une application mobile de planification de voyage, à partir de contraintes graphiques précises : style minimaliste et moderne, palette vive limitée et symbolique liée au voyage.
+    </p>
+    <p>
+        Réalisé en autonomie avec des retours réguliers, le projet comprend la création du logo, de la charte graphique, d’une landing page promotionnelle et des maquettes de l’application.
+    </p>
+    <p>
+        L’interface mobile s’articule autour d’un dashboard simple et intuitif, permettant de suivre ses voyages, d’accéder à des recommandations et de conserver ses souvenirs via un carnet de bord.
+        Ce projet m’a particulièrement permis de développer ma réflexion UX, notamment sur la structuration de l’information et l’expérience utilisateur globale.
+    </p>
+</section>
+    <footer class="footer-nav">
+        <a href="#" class="back-to-top" title="Remonter en haut">↑</a>
+        <a href="index.html#projets" class="nav-link">Revenir en haut de la page</a>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
 </html>
