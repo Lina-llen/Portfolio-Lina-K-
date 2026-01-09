@@ -1,3 +1,53 @@
+/* Désactive le curseur par défaut */
+html, body {
+    cursor: none !important;
+}
+
+/* 1. Le point central précis */
+.cursor-dot {
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 100000;
+    transform: translate(-50%, -50%);
+}
+
+/* 2. Le cercle "Glassmorphism" */
+.cursor-glass {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.192); /* Fond très léger */
+    border: 1px solid rgba(255, 255, 255, 0.411); /* Bordure fine façon verre */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 99999;
+    
+    /* L'EFFET MAGIQUE : Floute ce qui est derrière le rond */
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    
+    transform: translate(-50%, -50%);
+    /* Transition fluide pour les changements de taille au survol */
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+}
+
+/* Animation sur les éléments cliquables */
+.cursor-active-glass {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* S'assure que le curseur par défaut ne réapparaît pas sur les liens */
+a, button, .mockup-container, summary, .close-charte-text {
+    cursor: none !important;
+}
+
 /* PARTICLES BACKGROUND */
 #particles {
   position: fixed;
@@ -142,6 +192,7 @@ body {
   justify-content: left;
   padding: 20px;
   text-align: center;
+  font-size: 30px;
 }
 
 .card.center {
@@ -156,14 +207,14 @@ body {
   transform: translateX(calc(-50% - 240px)) scale(0.85);
   opacity: 2;
   z-index: 2;
-  filter: grayscale(70%);
+  filter: grayscale(50%);
 }
 
 .card.right {
   transform: translateX(calc(-50% + 240px)) scale(0.85);
   opacity: 2;
   z-index: 2;
-  filter: grayscale(70%);
+  filter: grayscale(50%);
 }
 
 .nav-btn {
@@ -202,6 +253,7 @@ body {
   align-items: center;
   padding: 0 50px;
   z-index: 1000;
+  border-bottom: 1px solid #452F71;
 }
 
 .nav-link {
@@ -281,14 +333,6 @@ summary:hover {
   display: block;
 }
 
-/* MAQUETTES MOBILE */
-.mobile-mockup {
-  max-width: 400px;
-  margin: 40px auto;
-  border-radius: 30px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-}
-
 /* FOOTER NAV */
 .footer-nav {
   margin: 100px 0 50px 0;
@@ -365,7 +409,6 @@ summary:hover {
     font-weight: bold;
 }
 
-/* STYLE DU PLEIN ÉCRAN (MODAL) */
 /* STYLE DU PLEIN ÉCRAN TOTAL */
 #fullscreen-viewer {
     position: fixed;
@@ -418,6 +461,7 @@ summary:hover {
     transform: scale(1.1);
     background: #1C1424;
 }
+
 .close-charte-btn {
     color: white;
     border: none;
@@ -429,6 +473,7 @@ summary:hover {
     align-items: center;
     gap: 12px;
 }
+
 .chevron-up {
     width: 8px;
     height: 8px;
@@ -436,4 +481,87 @@ summary:hover {
     border-top: 3px solid white;
     transform: rotate(45deg);
     display: inline-block;
+}
+
+/* The Clean Cup */
+.icon {
+    height: 160px; 
+    width: 160px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    flex-shrink: 0;
+ }
+/* --- SECTION LOGOS (AGRANDIE) --- */
+.logos-comparison {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.logo-item {
+    flex: 1;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo-item img {
+    width: 280px; 
+    height: auto;
+    margin-bottom: 25px;
+    transition: transform 0.4s ease;
+}
+
+.logo-item:hover img { 
+    transform: scale(1.05);
+ }
+
+ .logo-label { 
+    font-weight: bold;
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+}
+.icon-rec {
+   height: 200px;    
+    width: 280px;          
+    object-fit: contain;  
+    border-radius: 30px;
+}
+/* Le conteneur définit l'espace maximal */
+.mockup-container-long {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;     /* Centre verticalement si besoin */
+    margin: 30px 0;
+}
+
+/* L'image s'adapte intelligemment */
+.mockup-container-long img {
+    /* Sécurité : l'image ne dépasse jamais 75% de la hauteur de la fenêtre */
+    max-height: 75vh; 
+    
+    /* Largeur automatique pour respecter les proportions (pas d'étirement) */
+    width: auto;
+    
+    /* Optionnel : ajout d'un style premium */
+    border-radius: 15px;
+    border: 2px solid #8A38F5;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    
+    /* Garantit que l'image n'est pas écrasée */
+    object-fit: contain;
+}
+
+/* Ajustement pour les petits écrans (mobiles) */
+@media (max-width: 768px) {
+    .mockup-vertical-img {
+        max-width: 90%; /* Évite que l'image ne colle aux bords sur téléphone */
+        max-height: 60vh;
+    }
 }
