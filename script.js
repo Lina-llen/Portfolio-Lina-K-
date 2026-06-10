@@ -26,7 +26,7 @@ function animate() {
 animate();
 
 // Interactions au survol
-const interactives = document.querySelectorAll('a, button, .mockup-container, summary, .close-charte-text, .nav-link');
+const interactives = document.querySelectorAll('a, button, .mockup-container, summary, .close-charte-text, .nav-link, .gallery-item img');
 
 interactives.forEach(el => {
     el.addEventListener('mouseenter', () => glass.classList.add('cursor-active-glass'));
@@ -35,21 +35,23 @@ interactives.forEach(el => {
 
 const container = document.getElementById("particles");
 
-for (let i = 0; i < 80; i++) {
-  const p = document.createElement("div");
-  p.classList.add("particle");
+if (container) {
+  for (let i = 0; i < 80; i++) {
+    const p = document.createElement("div");
+    p.classList.add("particle");
 
-  const size = Math.random() * 4 + 3;
-  p.style.width = size + "px";
-  p.style.height = size + "px";
+    const size = Math.random() * 4 + 3;
+    p.style.width = size + "px";
+    p.style.height = size + "px";
 
-  p.style.left = Math.random() * 100 + "vw";
-  p.style.top = 100 + Math.random() * 20 + "vh";
+    p.style.left = Math.random() * 100 + "vw";
+    p.style.top = 100 + Math.random() * 20 + "vh";
 
-  p.style.animationDuration = 5 + Math.random() * 10 + "s";
-  p.style.animationDelay = Math.random() * -20 + "s";
+    p.style.animationDuration = 5 + Math.random() * 10 + "s";
+    p.style.animationDelay = Math.random() * -20 + "s";
 
-  container.appendChild(p);
+    container.appendChild(p);
+  }
 }
 
 const cards = document.querySelectorAll(".card");
@@ -75,15 +77,21 @@ function updateCarousel() {
   });
 }
 
-document.getElementById("next").addEventListener("click", () => {
-  current = (current + 1) % total;
-  updateCarousel();
-});
+const nextBtn = document.getElementById("next");
+if (nextBtn) {
+  nextBtn.addEventListener("click", () => {
+    current = (current + 1) % total;
+    updateCarousel();
+  });
+}
 
-document.getElementById("prev").addEventListener("click", () => {
-  current = (current - 1 + total) % total;
-  updateCarousel();
-});
+const prevBtn = document.getElementById("prev");
+if (prevBtn) {
+  prevBtn.addEventListener("click", () => {
+    current = (current - 1 + total) % total;
+    updateCarousel();
+  });
+}
 
 updateCarousel();
 
@@ -98,31 +106,7 @@ updateCarousel();
     }
     function openViewer() {
         const viewer = document.getElementById('fullscreen-viewer');
-        viewer.style.display = 'flex';
-        // Petit délai pour permettre l'animation CSS
-        setTimeout(() => {
-            viewer.classList.add('active');
-        }, 10);
-        // Désactiver le scroll de la page de fond
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeViewer() {
-        const viewer = document.getElementById('fullscreen-viewer');
-        viewer.classList.remove('active');
-        setTimeout(() => {
-            viewer.style.display = 'none';
-        }, 400);
-        // Réactiver le scroll
-        document.body.style.overflow = 'auto';
-    }
-    
-    // Fermer aussi avec la touche Echap
-    document.addEventListener('keydown', (e) => {
-        if (e.key === "Escape") closeViewer();
-    });
-    function openViewer() {
-        const viewer = document.getElementById('fullscreen-viewer');
+        if (!viewer) return;
         viewer.style.display = 'block';
         
         // Petit délai pour déclencher l'animation CSS
@@ -136,6 +120,7 @@ updateCarousel();
 
     function closeViewer() {
         const viewer = document.getElementById('fullscreen-viewer');
+        if (!viewer) return;
         viewer.classList.remove('active');
         
         setTimeout(() => {
@@ -146,7 +131,39 @@ updateCarousel();
         document.body.style.overflow = 'auto';
     }
     
-    // Fermeture avec la touche Échap
+    // --- VIEWER D'ILLUSTRATIONS ---
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    const illustrationViewer = document.getElementById('illustration-viewer');
+    const illustrationViewerImg = document.getElementById('illustration-viewer-img');
+    const closeIllustrationBtn = document.querySelector('.close-illustration');
+
+    if (galleryItems.length > 0 && illustrationViewer) {
+        // Ouvrir l'image en plein écran
+        galleryItems.forEach(img => {
+            img.addEventListener('click', () => {
+                illustrationViewerImg.src = img.src;
+                illustrationViewer.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Bloquer le scroll
+            });
+        });
+
+        // Fermer avec le bouton
+        if (closeIllustrationBtn) {
+            closeIllustrationBtn.addEventListener('click', () => {
+                illustrationViewer.classList.remove('active');
+                document.body.style.overflow = 'auto'; // Réactiver le scroll
+            });
+        }
+    }
+
+    // Fermeture avec la touche Échap pour tous les viewers
     document.addEventListener('keydown', (e) => {
-        if (e.key === "Escape") closeViewer();
+        if (e.key === "Escape") {
+            closeViewer();
+            
+            if (illustrationViewer && illustrationViewer.classList.contains('active')) {
+                illustrationViewer.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
     });

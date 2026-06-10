@@ -5,60 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Illustrations Personnelles - Lina Khial</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* --- STYLE SPÉCIFIQUE À LA GALERIE --- */
-        .intro-section {
-            max-width: 800px;
-            margin: 60px auto 40px auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
-            gap: 20px;
-            max-width: 1100px;
-            margin: 0 auto 80px auto;
-            padding: 20px;
-        }
-
-        .gallery-item {
-            aspect-ratio: 1 / 1; /* Force les images en carré pour une grille propre */
-            overflow: hidden;
-            border-radius: 15px;
-            border: 1px solid rgba(138, 56, 245, 0.3);
-            background: rgba(255, 255, 255, 0.03);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Remplit le carré sans déformer */
-            display: block;
-            transition: transform 0.5s ease;
-        }
-
-        /* Effets au survol */
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            border-color: #8A38F5;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        /* Responsive : 2 colonnes sur tablette, 1 sur mobile */
-        @media (max-width: 900px) {
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 600px) {
-            .gallery-grid { grid-template-columns: 1fr; }
-            .title-gradient { font-size: 38px; }
-        }
-    </style>
 </head>
 <body>
 
@@ -77,30 +23,23 @@
     </section>
 
     <main class="gallery-grid">
-        <div class="gallery-item"><img src="Images/1.png" alt="Illustration 1"></div>
-        <div class="gallery-item"><img src="Images/2.png" alt="Illustration 2"></div>
-        <div class="gallery-item"><img src="Images/3.png" alt="Illustration 3"></div>
-        <div class="gallery-item"><img src="Images/4.png" alt="Illustration 4"></div>
-        <div class="gallery-item"><img src="Images/5.png" alt="Illustration 5"></div>
-        <div class="gallery-item"><img src="Images/6.png" alt="Illustration 6"></div>
-        <div class="gallery-item"><img src="Images/7.png" alt="Illustration 7"></div>
-        <div class="gallery-item"><img src="Images/8.png" alt="Illustration 8"></div>
-        <div class="gallery-item"><img src="Images/9.png" alt="Illustration 9"></div>
+        <div class="gallery-item"><img src="Illustrations/1.png" alt="Illustration 1"></div>
+        <div class="gallery-item"><img src="Illustrations/2.png" alt="Illustration 2"></div>
+        <div class="gallery-item"><img src="Illustrations/3.png" alt="Illustration 3"></div>
+        <div class="gallery-item"><img src="Illustrations/4.png" alt="Illustration 4"></div>
+        <div class="gallery-item"><img src="Illustrations/5.png" alt="Illustration 5"></div>
+        <div class="gallery-item"><img src="Illustrations/6.png" alt="Illustration 6"></div>
+        <div class="gallery-item"><img src="Illustrations/7.png" alt="Illustration 7"></div>
+        <div class="gallery-item"><img src="Illustrations/8.png" alt="Illustration 8"></div>
+        <div class="gallery-item"><img src="Illustrations/9.png" alt="Illustration 9"></div>
     </main>
 
-    <footer class="footer-nav">
-        <a href="index.html" class="nav-link">Revenir à l'accueil</a>
-    </footer>
-
+    <!-- VIEWER PLEIN ÉCRAN -->
+   <div id="illustration-viewer">
+    <button class="close-illustration">Fermer ×</button>
+    <img id="illustration-viewer-img" src="" alt="Illustration plein écran">
+</div>
+    <!-- Un seul et unique script appelé -->
     <script src="script.js"></script>
-    <script>
-        // On s'assure que le curseur glass s'active sur les images de la galerie
-        const galleryImages = document.querySelectorAll('.gallery-item');
-        galleryImages.forEach(item => {
-            item.addEventListener('mouseenter', () => glass.classList.add('cursor-active-glass'));
-            item.addEventListener('mouseleave', () => glass.classList.remove('cursor-active-glass'));
-        });
-    </script>
-
 </body>
 </html>
