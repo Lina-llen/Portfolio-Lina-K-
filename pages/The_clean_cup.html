@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Clean Cup — Identité Visuelle & Coffee Shop Premium — Lina Khial</title>
+  <meta name="description" content="Découvrez le projet The Clean Cup : identité visuelle, création de logo et maquettes pour un coffee shop moderne et raffiné par Lina Khial." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- Curseur personnalisé en verre fluide -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-glass" aria-hidden="true"></div>
+
+  <!-- Arrière-plan Canvas Plasma froid -->
+  <canvas id="plasma-canvas" aria-hidden="true"></canvas>
+
+  <!-- Barre de navigation capsule sans points -->
+  <header class="plasma-header" role="banner">
+    <a href="../index.html" class="brand-link" aria-label="Retour à l'accueil">
+      Lina Khial
+    </a>
+
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="../index.html#projets" class="nav-item">Projets</a>
+      <a href="apropos.html" class="nav-item">À propos</a>
+      <a href="contact.html" class="nav-item">Contact</a>
+    </nav>
+
+    <div class="nav-status">
+      Recherche de stage / alternance
+    </div>
+  </header>
+
+  <main class="main-container">
+    
+    <div class="project-header-bar">
+      <a href="../index.html#projets" class="back-link">
+        <span aria-hidden="true">&larr;</span>
+        <span>Retour aux projets</span>
+      </a>
+      <div style="display: flex; gap: 8px;">
+        <span class="badge-plasma">Logo</span>
+      </div>
+    </div>
+
+    <!-- Hero du projet (Logo naturel sans case) -->
+    <section class="project-hero">
+      <img src="../images/projets/The clean cup/Logo-final-carré.png" alt="Logo carré The Clean Cup" class="project-hero-logo" style="border-radius: var(--radius-lg);" />
+      <div>
+        <h1 class="title-gradient" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 12px;">
+          The Clean Cup
+        </h1>
+        <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.7; max-width: 720px;">
+          The Clean Cup est un coffee shop premium qui souhaite se démarquer par une image élégante et sophistiquée, à mi-chemin entre tradition artisanale et luxe contemporain.
+        </p>
+      </div>
+    </section>
+
+    <!-- Déclinaisons de logos (Bords arrondis) -->
+    <section style="margin-bottom: 40px;">
+      <h2 class="title-gradient" style="font-size: 1.8rem; margin-bottom: 18px;">Déclinaisons du Logo</h2>
+      <div class="logos-grid">
+        <div class="logo-card">
+          <img src="../images/projets/The clean cup/Logo-final-bis.png" alt="Logo The Clean Cup fond sombre" loading="lazy" style="border-radius: var(--radius-md);" />
+          <span class="logo-card-label">Version pour fond sombre</span>
+        </div>
+        <div class="logo-card" style="background: rgba(255, 255, 255, 0.08);">
+          <img src="../images/projets/The clean cup/Logo-final.png" alt="Logo The Clean Cup fond clair" loading="lazy" style="border-radius: var(--radius-md);" />
+          <span class="logo-card-label">Version pour fond clair</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Maquette cliquable (Bords arrondis) -->
+    <section style="margin-bottom: 48px;">
+      <h2 class="title-gradient" style="font-size: 2rem; margin-bottom: 20px;">Mise en Situation Produit</h2>
+      <div class="mockup-display rounded-visuals" data-full-img="../images/projets/The clean cup/Mockup-CleanCup.png" title="Agrandir en plein écran">
+        <img src="../images/projets/The clean cup/Mockup-CleanCup.png" alt="Maquette The Clean Cup" style="border-radius: var(--radius-lg);" />
+        <div class="mockup-overlay-badge">
+          <span>Aperçu plein écran</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notes et détails sur le projet -->
+    <section class="project-details-card">
+      <h2 class="title-gradient" style="font-size: 1.8rem; margin-bottom: 18px;">Notes sur le projet</h2>
+      <div style="color: var(--text-muted); line-height: 1.8; display: flex; flex-direction: column; gap: 14px;">
+        <p>
+          The Clean Cup est un projet fictif réalisé lors d’une immersion professionnelle, centré sur la création de l’identité visuelle d’un café moderne et premium. L’objectif était de concevoir un logo unique reflétant les valeurs de la marque : authenticité, raffinement et modernité, à travers un design sobre et élégant.
+        </p>
+        <p>
+          Réalisé en autonomie avec des retours réguliers, le projet s’est concentré sur la recherche graphique et la conception du logo, accompagnée de quelques mockups permettant de projeter son utilisation dans un lieu réel. Les contraintes imposées : minimalisme, lisibilité de la typographie et symbolique liée au café, m’ont permis d’explorer plusieurs pistes créatives tout en respectant une direction artistique cohérente.
+        </p>
+        <p>
+          Ce projet m’a permis de renforcer ma réflexion autour du design de logo et de l’identité de marque, en apprenant à traduire des valeurs en une identité visuelle simple et reconnaissable.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Visionneuse plein écran unifiée (Lightbox) -->
+  <div id="plasma-lightbox" class="plasma-lightbox" role="dialog" aria-modal="true" aria-label="Aperçu grand format">
+    <button id="lightbox-close" class="lightbox-close-btn" aria-label="Fermer l'aperçu">&times;</button>
+    <div class="lightbox-content-wrap">
+      <img id="lightbox-img" src="" alt="Aperçu grand format" />
+    </div>
+  </div>
+
+  <footer class="plasma-footer" role="contentinfo">
+    <div class="footer-inner">
+      <span class="footer-brand">Lina Khial</span>
+      <span class="footer-copy">© 2026 Lina Khial — Tous droits réservés.</span>
+      <a href="#" class="back-to-top-btn" aria-label="Revenir en haut de la page">
+        <span>Remonter</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

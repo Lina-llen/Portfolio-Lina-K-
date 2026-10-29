@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horizen — Projet UI/UX & Logo — Lina Khial</title>
+  <meta name="description" content="Découvrez le projet Horizen : conception d'identité visuelle, charte graphique et maquette UI/UX d'une application mobile de voyage par Lina Khial." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- Curseur personnalisé en verre fluide -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-glass" aria-hidden="true"></div>
+
+  <!-- Arrière-plan Canvas Plasma froid -->
+  <canvas id="plasma-canvas" aria-hidden="true"></canvas>
+
+  <!-- Barre de navigation capsule sans points -->
+  <header class="plasma-header" role="banner">
+    <a href="../index.html" class="brand-link" aria-label="Retour à l'accueil">
+      Lina Khial
+    </a>
+
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="../index.html#projets" class="nav-item">Projets</a>
+      <a href="apropos.html" class="nav-item">À propos</a>
+      <a href="contact.html" class="nav-item">Contact</a>
+    </nav>
+
+    <div class="nav-status">
+      Recherche de stage / alternance
+    </div>
+  </header>
+
+  <main class="main-container">
+    
+    <div class="project-header-bar">
+      <a href="../index.html#projets" class="back-link">
+        <span aria-hidden="true">&larr;</span>
+        <span>Retour aux projets</span>
+      </a>
+      <div style="display: flex; gap: 8px;">
+        <span class="badge-plasma">UI/UX</span>
+        <span class="badge-plasma">Logo</span>
+      </div>
+    </div>
+
+    <!-- Hero du projet (Logo naturel sans case) -->
+    <section class="project-hero">
+      <img src="../images/projets/Horizen/App-icon.png" alt="Logo de l'application Horizen" class="project-hero-logo" />
+      <div>
+        <h1 class="title-gradient" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 12px;">
+          Horizen
+        </h1>
+        <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.7; max-width: 720px;">
+          Horizen est une application mobile de voyage permettant aux utilisateurs de réserver facilement des séjours, des activités et des expériences dans le monde entier.
+        </p>
+      </div>
+    </section>
+
+    <!-- Maquette Web Immersive (Fenêtre de navigateur complète) -->
+    <section style="margin-bottom: 56px;">
+      <h2 class="title-gradient" style="font-size: 2rem; margin-bottom: 12px;">Maquette Web Immersive</h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+        Faites défiler dans la fenêtre pour parcourir l'interface complète de la landing page (cliquez pour agrandir en plein écran).
+      </p>
+
+      <div class="browser-showcase-frame">
+        <div class="browser-bar">
+          <div class="browser-dots">
+            <span class="browser-dot" style="background: #ef4444;"></span>
+            <span class="browser-dot" style="background: #f59e0b;"></span>
+            <span class="browser-dot" style="background: #10b981;"></span>
+          </div>
+          <div class="browser-address">https://horizen-voyages.app</div>
+        </div>
+        <div class="browser-content" data-full-img="../images/projets/Horizen/Landing-page-full.png" title="Cliquez pour agrandir la vue complète">
+          <img src="../images/projets/Horizen/Landing-page-full.png" alt="Landing page complète de Horizen" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Charte Graphique restaurée -->
+    <div class="details-container">
+      <details id="charte-details">
+        <summary>Cliquez pour dérouler la Charte Graphique</summary>
+        <div class="full-width-img-container"><img src="../images/projets/Horizen/Charte graphique/Charte-grahpique-HORIZEN-cover.png" class="full-width-img" alt="Couverture Charte Horizen" loading="lazy"></div>
+        <div class="full-width-img-container"><img src="../images/projets/Horizen/Charte graphique/Charte-grahpique-HORIZEN-sommaire.png" class="full-width-img" alt="Sommaire Charte Horizen" loading="lazy"></div>
+        <div class="full-width-img-container"><img src="../images/projets/Horizen/Charte graphique/Charte-grahpique-HORIZEN-intro.png" class="full-width-img" alt="Introduction Charte Horizen" loading="lazy"></div>
+        <div class="full-width-img-container"><img src="../images/projets/Horizen/Charte graphique/Charte-grahpique-HORIZEN-logo.png" class="full-width-img" alt="Logo Charte Horizen" loading="lazy"></div>
+        <div class="full-width-img-container"><img src="../images/projets/Horizen/Charte graphique/Charte-grahpique-HORIZEN-logo-2.png" class="full-width-img" alt="Variantes Logo Horizen" loading="lazy"></div>
+        <div class="full-width-img-container"><img src="../images/projets/Horizen/Charte graphique/Charte-grahpique-HORIZEN-Logo-3.png" class="full-width-img" alt="Construction Logo Horizen" loading="lazy"></div>
+        <div class="full-width-img-container"><img src="../images/projets/Horizen/Charte graphique/Charte-grahpique-HORIZEN-couleurs.png" class="full-width-img" alt="Palette Couleurs Horizen" loading="lazy"></div>
+        <div class="full-width-img-container"><img src="../images/projets/Horizen/Charte graphique/Charte-grahpique-HORIZEN-typographies.png" class="full-width-img" alt="Typographies Horizen" loading="lazy"></div>
+        <div class="full-width-img-container"><img src="../images/projets/Horizen/Charte graphique/Charte-grahpique-HORIZEN-typographies-2.png" class="full-width-img" alt="Typographies Déclinaisons Horizen" loading="lazy"></div>
+        <div style="padding: 40px 0; text-align: center;">
+          <p class="close-charte-btn" onclick="closeCharte()">
+            Refermer la charte graphique
+          </p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Notes et détails sur le projet -->
+    <section class="project-details-card">
+      <h2 class="title-gradient" style="font-size: 1.8rem; margin-bottom: 18px;">Notes sur le projet</h2>
+      <div style="color: var(--text-muted); line-height: 1.8; display: flex; flex-direction: column; gap: 14px;">
+        <p>
+          Horizen est un projet fictif réalisé lors d’une immersion professionnelle. J’y ai conçu l’identité visuelle et l’expérience utilisateur d’une application mobile de planification de voyage, à partir de contraintes graphiques précises : style minimaliste et moderne, palette vive limitée et symbolique liée au voyage.
+        </p>
+        <p>
+          Réalisé en autonomie avec des retours réguliers, le projet comprend la création du logo, de la charte graphique, d’une landing page promotionnelle et des maquettes de l’application.
+        </p>
+        <p>
+          L’interface mobile s’articule autour d’un dashboard simple et intuitif, permettant de suivre ses voyages, d’accéder à des recommandations et de conserver ses souvenirs via un carnet de bord. Ce projet m’a particulièrement permis de développer ma réflexion UX, notamment sur la structuration de l’information et l’expérience utilisateur globale.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Visionneuse plein écran unifiée (Lightbox) -->
+  <div id="plasma-lightbox" class="plasma-lightbox" role="dialog" aria-modal="true" aria-label="Aperçu grand format">
+    <button id="lightbox-close" class="lightbox-close-btn" aria-label="Fermer l'aperçu">&times;</button>
+    <div class="lightbox-content-wrap">
+      <img id="lightbox-img" src="" alt="Aperçu grand format" />
+    </div>
+  </div>
+
+  <footer class="plasma-footer" role="contentinfo">
+    <div class="footer-inner">
+      <span class="footer-brand">Lina Khial</span>
+      <span class="footer-copy">© 2026 Lina Khial — Tous droits réservés.</span>
+      <a href="#" class="back-to-top-btn" aria-label="Revenir en haut de la page">
+        <span>Remonter</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

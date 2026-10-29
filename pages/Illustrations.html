@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Illustrations — Créations Personnelles — Lina Khial</title>
+  <meta name="description" content="Galerie d'illustrations et créations artistiques numériques personnelles par Lina Khial." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- Curseur personnalisé en verre fluide -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-glass" aria-hidden="true"></div>
+
+  <!-- Arrière-plan Canvas Plasma froid -->
+  <canvas id="plasma-canvas" aria-hidden="true"></canvas>
+
+  <!-- Barre de navigation capsule sans points -->
+  <header class="plasma-header" role="banner">
+    <a href="../index.html" class="brand-link" aria-label="Retour à l'accueil">
+      Lina Khial
+    </a>
+
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="../index.html#projets" class="nav-item">Projets</a>
+      <a href="apropos.html" class="nav-item">À propos</a>
+      <a href="contact.html" class="nav-item">Contact</a>
+    </nav>
+
+    <div class="nav-status">
+      Recherche de stage / alternance
+    </div>
+  </header>
+
+  <main class="main-container">
+    
+    <div class="project-header-bar">
+      <a href="../index.html#projets" class="back-link">
+        <span aria-hidden="true">&larr;</span>
+        <span>Retour aux projets</span>
+      </a>
+      <div style="display: flex; gap: 8px;">
+        <span class="badge-plasma">Illustration</span>
+      </div>
+    </div>
+
+    <!-- Intro de la galerie -->
+    <section style="text-align: center; margin-bottom: 40px;">
+      <h1 class="title-gradient" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 12px;">
+        Mes Illustrations
+      </h1>
+      <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.7; max-width: 680px; margin: 0 auto;">
+        Bienvenue dans mon univers créatif. Vous trouverez ici une sélection de mes illustrations personnelles, nées de mon intérêt pour le dessin, le travail des volumes et l'harmonie des teintes.
+      </p>
+      <p style="font-size: 0.88rem; color: var(--accent-violet-ice); margin-top: 10px;">
+        Cliquez sur une illustration pour la contempler en grand format.
+      </p>
+    </section>
+
+    <!-- Grille d'illustrations pleine résolution -->
+    <section class="gallery-grid-plasma" aria-label="Galerie des illustrations">
+      <div class="gallery-card-item" title="Agrandir l'illustration 1">
+        <img src="../images/illustrations/1.png" alt="Illustration personnelle 1 par Lina Khial" loading="lazy" />
+      </div>
+      <div class="gallery-card-item" title="Agrandir l'illustration 2">
+        <img src="../images/illustrations/2.png" alt="Illustration personnelle 2 par Lina Khial" loading="lazy" />
+      </div>
+      <div class="gallery-card-item" title="Agrandir l'illustration 3">
+        <img src="../images/illustrations/3.png" alt="Illustration personnelle 3 par Lina Khial" loading="lazy" />
+      </div>
+      <div class="gallery-card-item" title="Agrandir l'illustration 4">
+        <img src="../images/illustrations/4.png" alt="Illustration personnelle 4 par Lina Khial" loading="lazy" />
+      </div>
+      <div class="gallery-card-item" title="Agrandir l'illustration 5">
+        <img src="../images/illustrations/5.png" alt="Illustration personnelle 5 par Lina Khial" loading="lazy" />
+      </div>
+      <div class="gallery-card-item" title="Agrandir l'illustration 6">
+        <img src="../images/illustrations/6.png" alt="Illustration personnelle 6 par Lina Khial" loading="lazy" />
+      </div>
+      <div class="gallery-card-item" title="Agrandir l'illustration 7">
+        <img src="../images/illustrations/7.png" alt="Illustration personnelle 7 par Lina Khial" loading="lazy" />
+      </div>
+      <div class="gallery-card-item" title="Agrandir l'illustration 8">
+        <img src="../images/illustrations/8.png" alt="Illustration personnelle 8 par Lina Khial" loading="lazy" />
+      </div>
+      <div class="gallery-card-item" title="Agrandir l'illustration 9">
+        <img src="../images/illustrations/9.png" alt="Illustration personnelle 9 par Lina Khial" loading="lazy" />
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Visionneuse plein écran unifiée (Lightbox) -->
+  <div id="plasma-lightbox" class="plasma-lightbox" role="dialog" aria-modal="true" aria-label="Aperçu grand format">
+    <button id="lightbox-close" class="lightbox-close-btn" aria-label="Fermer l'aperçu">&times;</button>
+    <div class="lightbox-content-wrap">
+      <img id="lightbox-img" src="" alt="Aperçu grand format" />
+    </div>
+  </div>
+
+  <footer class="plasma-footer" role="contentinfo">
+    <div class="footer-inner">
+      <span class="footer-brand">Lina Khial</span>
+      <span class="footer-copy">© 2026 Lina Khial — Tous droits réservés.</span>
+      <a href="#" class="back-to-top-btn" aria-label="Revenir en haut de la page">
+        <span>Remonter</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

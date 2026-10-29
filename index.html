@@ -3,83 +3,212 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Lina Khial</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css"/>
+  <title>Lina Khial — Portfolio UI/UX & Design Graphique</title>
+  <meta name="description" content="Portfolio de Lina Khial, designer graphique et conceptrice d'interfaces UI/UX. Découvrez mes projets en identité visuelle, web design et illustrations." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="cursor-dot"></div>
-  <div class="cursor-glass"></div>
-  <h1 class="title-gradient FS-1">PORTFOLIO</h1>
-  <div class="subtitle">Lina Khial</div>
-<br>
-  <div class="d-flex justify-content-center gap-4 mt-4">
-    <a href="apropos.html"><button class="custom-btn">À propos</button></a>
-    <a href="contact.html"><button class="custom-btn ms-4">Contact</button></a>
-  </div>
-  <h2 class="margin-1 FS-1 title-gradient">Mes projets</h2>
 
-  <div class="carousel-wrapper">
-  <button class="nav-btn left" id="prev">&#10094;</button>
-  <button class="nav-btn right" id="next">&#10095;</button>
-  
-  <div id="particles"></div>
+  <!-- Curseur personnalisé en verre fluide -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-glass" aria-hidden="true"></div>
 
-  <div class="carousel">
-    <a class="card" href="Yoru.html">
-        <img src="Projets Figma/Yoru/Yoru-Logo - Copie.png" alt="Yoru" class="image"/>
-      <div class="text">
-        <span>Yoru</span>
-        <div class="badges-container">
-            <span class="badge">Logo</span>
+  <!-- Toile de fond animée Plasma liquide violet froid -->
+  <canvas id="plasma-canvas" aria-hidden="true"></canvas>
+
+  <!-- Barre de navigation capsule (sans points) -->
+  <header class="plasma-header" role="banner">
+    <a href="index.html" class="brand-link" aria-label="Accueil Portfolio Lina Khial">
+      Lina Khial
+    </a>
+
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#projets" class="nav-item">Projets</a>
+      <a href="pages/apropos.html" class="nav-item">À propos</a>
+      <a href="pages/contact.html" class="nav-item">Contact</a>
+    </nav>
+
+    <div class="nav-status">
+      Recherche de stage / alternance
+    </div>
+  </header>
+
+  <main class="main-container" id="contenu-principal">
+    
+    <!-- Hero Section Épurée (Titre & Nom uniquement) -->
+    <section class="hero-home">
+      <h1 class="hero-title title-gradient">PORTFOLIO</h1>
+      <h2 class="hero-subtitle">Lina Khial</h2>
+    </section>
+
+    <!-- Section Projets & Carrousel 3D -->
+    <section id="projets" class="projects-section" aria-label="Mes réalisations">
+      <div class="section-header">
+        <h2 class="section-title title-gradient">Mes Projets</h2>
+        <p class="section-desc">Faites défiler pour explorer mes projets en identité visuelle, ergonomie et design.</p>
+      </div>
+
+      <div class="carousel-3d-wrapper">
+        <div class="carousel-track">
+
+          <!-- Projet 1 : Horizen -->
+          <article class="carousel-card is-active" data-index="0">
+            <a href="pages/Horizen.html" class="card-inner-link" aria-label="Voir le projet Horizen">
+              <div class="card-media">
+                <img src="images/projets/Horizen/Logo-Final.png" alt="Logo Horizen" loading="lazy" />
+              </div>
+              <div class="card-body">
+                <div class="card-badges">
+                  <span class="badge-plasma">UI/UX</span>
+                  <span class="badge-plasma">Logo</span>
+                </div>
+                <h3 class="card-title">
+                  <span>Horizen</span>
+                  <span class="card-arrow" aria-hidden="true">&nearr;</span>
+                </h3>
+                <p class="card-summary">Application mobile et charte graphique de réservation d'expériences de voyage.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Projet 2 : Yoru -->
+          <article class="carousel-card is-next" data-index="1">
+            <a href="pages/Yoru.html" class="card-inner-link" aria-label="Voir le projet Yoru">
+              <div class="card-media">
+                <img src="images/projets/Yoru/Yoru-Logo - Copie.png" alt="Logo Yoru" loading="lazy" />
+              </div>
+              <div class="card-body">
+                <div class="card-badges">
+                  <span class="badge-plasma">Logo</span>
+                </div>
+                <h3 class="card-title">
+                  <span>Yoru</span>
+                  <span class="card-arrow" aria-hidden="true">&nearr;</span>
+                </h3>
+                <p class="card-summary">Identité visuelle et déclinaisons pour une marque streetwear contemporaine.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Projet 3 : Épicurien -->
+          <article class="carousel-card is-hidden-right" data-index="2">
+            <a href="pages/Epicurien.html" class="card-inner-link" aria-label="Voir le projet Épicurien">
+              <div class="card-media">
+                <img src="images/projets/Épicurien/Epicurien-logo.png" alt="Logo Épicurien" loading="lazy" />
+              </div>
+              <div class="card-body">
+                <div class="card-badges">
+                  <span class="badge-plasma">Logo</span>
+                </div>
+                <h3 class="card-title">
+                  <span>Épicurien</span>
+                  <span class="card-arrow" aria-hidden="true">&nearr;</span>
+                </h3>
+                <p class="card-summary">Conception de logo et univers graphique raffiné pour la gastronomie.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Projet 4 : The Clean Cup -->
+          <article class="carousel-card is-hidden-right" data-index="3">
+            <a href="pages/The_clean_cup.html" class="card-inner-link" aria-label="Voir le projet The Clean Cup">
+              <div class="card-media">
+                <img src="images/projets/The clean cup/Logo-final.png" alt="Logo The Clean Cup" loading="lazy" />
+              </div>
+              <div class="card-body">
+                <div class="card-badges">
+                  <span class="badge-plasma">Logo</span>
+                </div>
+                <h3 class="card-title">
+                  <span>The Clean Cup</span>
+                  <span class="card-arrow" aria-hidden="true">&nearr;</span>
+                </h3>
+                <p class="card-summary">Conception d'un logo épuré pour un concept moderne autour des boissons nomades.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Projet 5 : Data Mind -->
+          <article class="carousel-card is-hidden-left" data-index="4">
+            <a href="pages/Data_mind.html" class="card-inner-link" aria-label="Voir le projet Data Mind">
+              <div class="card-media">
+                <img src="images/projets/DataMind/Logo-DM-sombre.png" alt="Logo Data Mind" loading="lazy" />
+              </div>
+              <div class="card-body">
+                <div class="card-badges">
+                  <span class="badge-plasma">Logo</span>
+                </div>
+                <h3 class="card-title">
+                  <span>Data Mind</span>
+                  <span class="card-arrow" aria-hidden="true">&nearr;</span>
+                </h3>
+                <p class="card-summary">Logo géométrique pour une startup spécialisée dans les données et l'intelligence artificielle.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Projet 6 : Illustrations -->
+          <article class="carousel-card is-prev" data-index="5">
+            <a href="pages/Illustrations.html" class="card-inner-link" aria-label="Voir les Illustrations">
+              <div class="card-media">
+                <img src="images/illustrations/7.png" alt="Illustration Lina Khial" class="cover-fill" loading="lazy" />
+              </div>
+              <div class="card-body">
+                <div class="card-badges">
+                  <span class="badge-plasma">Illustration</span>
+                </div>
+                <h3 class="card-title">
+                  <span>Illustrations</span>
+                  <span class="card-arrow" aria-hidden="true">&nearr;</span>
+                </h3>
+                <p class="card-summary">Collection d'illustrations personnelles, travail des volumes et harmonie des teintes.</p>
+              </div>
+            </a>
+          </article>
+
+        </div>
+
+        <div class="carousel-controls">
+          <button id="carousel-prev" class="carousel-nav-btn" aria-label="Projet précédent">
+            &#10094;
+          </button>
+          
+          <div class="carousel-dots" role="tablist" aria-label="Pagination des projets">
+          </div>
+
+          <button id="carousel-next" class="carousel-nav-btn" aria-label="Projet suivant">
+            &#10095;
+          </button>
         </div>
       </div>
-    </a>
-    <a class="card" href="Epicurien.html">
-        <img src="Projets Figma/Épicurien/Epicurien-logo.png" alt="Projet 2" class="image"/>
-      <div class="text">
-        <span>Épicurien</span>
-        <div class="badges-container">
-            <span class="badge">Logo</span>
-        </div>
-      </div>
-    </a>
-    <a class="card" href="Horizen.html">
-        <img src="Projets Figma/Horizen/Logo-Final.png" alt="Projet 3" class="image"/>
-      <div class="text">
-        <span>Horizen</span>
-        <div class="badges-container">
-            <span class="badge">UI/UX</span>
-            <span class="badge">Logo</span>
-        </div>
-      </div>
-    </a>
-    <a class="card" href="The_clean_cup.html">
-        <img src="Projets Figma/The clean cup/Logo-final.png" alt="Projet 4" class="image"/>
-      <div class="text">
-        <span>The Clean Cup</span>
-        <div class="badges-container">
-            <span class="badge">Logo</span>
-        </div>
-      </div>
-    </a>
-    <a class="card" href="Data_mind.html">
-        <img src="Projets Figma/DataMind/Logo-DM-sombre.png" alt="Projet 5" class="image"/>
-      <div class="text">
-        <span>Data Mind</span>
-        <div class="badges-container">
-            <span class="badge">Logo</span>
-        </div>
-      </div>
-    </a>
-    <a class="card" href="Illustrations.html">
-        <img src="Illustrations/7.png" alt="Projet 5" class="image"/>
-      <div class="text">
-        <span>Illustrations</span>
-      </div>
-    </a>
+    </section>
+
+  </main>
+
+  <!-- Visionneuse plein écran unifiée -->
+  <div id="plasma-lightbox" class="plasma-lightbox" role="dialog" aria-modal="true" aria-label="Aperçu grand format">
+    <button id="lightbox-close" class="lightbox-close-btn" aria-label="Fermer l'aperçu">&times;</button>
+    <div class="lightbox-content-wrap">
+      <img id="lightbox-img" src="" alt="Aperçu grand format" />
+    </div>
   </div>
-  </div>
-    <script src="script.js"></script>
+
+  <!-- Pied de page pleine largeur -->
+  <footer class="plasma-footer" role="contentinfo">
+    <div class="footer-inner">
+      <span class="footer-brand">Lina Khial</span>
+      <span class="footer-copy">© 2026 Lina Khial — Tous droits réservés.</span>
+      <a href="#" class="back-to-top-btn" aria-label="Revenir en haut de la page">
+        <span>Remonter</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

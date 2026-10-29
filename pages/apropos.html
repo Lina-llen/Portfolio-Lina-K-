@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À Propos — Lina Khial</title>
+  <meta name="description" content="Découvrez le parcours de Lina Khial, sa vision du design graphique, de l'UI/UX et du développement web." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- Curseur personnalisé en verre fluide -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-glass" aria-hidden="true"></div>
+
+  <!-- Arrière-plan Canvas Plasma froid -->
+  <canvas id="plasma-canvas" aria-hidden="true"></canvas>
+
+  <!-- Barre de navigation capsule sans points -->
+  <header class="plasma-header" role="banner">
+    <a href="../index.html" class="brand-link" aria-label="Retour à l'accueil">
+      Lina Khial
+    </a>
+
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="../index.html#projets" class="nav-item">Projets</a>
+      <a href="apropos.html" class="nav-item active" aria-current="page">À propos</a>
+      <a href="contact.html" class="nav-item">Contact</a>
+    </nav>
+
+    <div class="nav-status">
+      Recherche de stage / alternance
+    </div>
+  </header>
+
+  <main class="main-container">
+    
+    <div class="project-header-bar">
+      <a href="../index.html" class="back-link">
+        <span aria-hidden="true">&larr;</span>
+        <span>Retour à l'accueil</span>
+      </a>
+    </div>
+
+    <!-- Présentation fluide et continue (sans blocs découpés) -->
+    <article class="about-flow-container">
+      
+      <header class="about-header-zone">
+        <h1 class="title-gradient" style="font-size: clamp(2.8rem, 6vw, 4.5rem); margin-bottom: 12px;">
+          À Propos
+        </h1>
+        <h2 style="font-family: var(--font-display); font-size: 1.45rem; color: var(--accent-violet-light); font-weight: 500;">
+          Créativité structurée, UI/UX & Développement Web
+        </h2>
+      </header>
+
+      <div class="about-editorial-text">
+        <p>
+          Passionnée d’art et de dessin, j’ai vite réalisé que la création visuelle prenait tout son sens lorsqu’elle s’appuyait sur un cadre rigoureux, une logique éprouvée et des besoins concrets. Cette recherche d'équilibre m'a naturellement dirigée vers le <strong>design graphique et la conception d’interfaces UI/UX</strong> : un domaine où l’esthétique se met au service de l’usage.
+        </p>
+
+        <p>
+          C’est lors d’une immersion professionnelle que j’ai découvert le <strong>développement web</strong>, et le déclic a été immédiat. Comprendre ce qui se passe sous le capot d'une maquette a transformé ma façon de concevoir. Depuis, je développe mes propres projets en intégrant directement mes interfaces en code (HTML5 sémantique, CSS3 moderne et JavaScript natif), en veillant constamment à la propreté de l'architecture et à la fluidité des interactions.
+        </p>
+
+        <p>
+          Ce double regard entre design et développement me permet d'anticiper la faisabilité technique dès la phase de prototypage sur Figma, tout en apportant une attention chirurgicale aux détails lors de l'intégration : micro-animations fluides, responsive design naturel et respect des standards d'accessibilité.
+        </p>
+
+        <p>
+          Ce qui m'anime au quotidien, c'est la <strong>résolution de problèmes</strong> : qu'il s'agisse d'optimiser l'arborescence d'un parcours utilisateur complexe ou de structurer un code lisible, maintenable et performant.
+        </p>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <a href="contact.html" class="btn-plasma">
+          <span>Prendre contact</span>
+        </a>
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer class="plasma-footer" role="contentinfo">
+    <div class="footer-inner">
+      <span class="footer-brand">Lina Khial</span>
+      <span class="footer-copy">© 2026 Lina Khial — Tous droits réservés.</span>
+      <a href="#" class="back-to-top-btn" aria-label="Revenir en haut de la page">
+        <span>Remonter</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
