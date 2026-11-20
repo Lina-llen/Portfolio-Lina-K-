@@ -36,10 +36,20 @@ Portfolio-Lina-K-/
 
 1. **Palette Lilas Froid & Lavande Givrée** :
    - Nuances douces et polaires : lilas clair (`#a78bfa`), lavande givrée (`#c4b5fd`), accent glacé (`#ede9fe`), et lueurs violines subtiles sur fond nuit profond (`#07040f`).
-2. **Carrousel : Remplissage Intégral de l'Espace Dédié à l'Image** :
-   - Suppression des paddings réducteurs de `.card-media`. Les logos s'étendent désormais jusqu'aux bordures de la zone média (290px de haut), avec un effet de drop-shadow soigné.
-   - L'illustration du 6e projet remplit 100% de la surface en `cover-fill`.
-3. **Restauration Intégrale de la Charte Graphique Horizen** :
+2. **Carrousel : Recentrage Absolu & Cadrage Harmonieux des Visuels** :
+   - Recentrage parfait des visuels au cœur du halo radial violet avec padding d'aération équilibré (`padding: 22px 28px` desktop, `14px 18px` mobile) pour éviter que les visuels ne soient écrasés contre les bordures.
+   - Compensation micrométrique des décalages intrinsèques des fichiers PNG originaux via `object-position` (Horizen recentré horizontalement à `53.3%`, Épicurien recentré verticalement à `45.9%`).
+   - Finition vitrée avec arrondis `border-radius: var(--radius-md)` et drop-shadow soigné sur les logos.
+   - Conservation du mode `cover-fill` plein cadre (`object-fit: cover`) pour la 6e carte d'illustration.
+3. **Lien GitHub & Logo Officiel Intégrés** :
+   - Carte de contact dédiée pour GitHub dans `pages/contact.html` avec logo vectoriel officiel GitHub SVG, lien vers `https://github.com/Lina-llen`, flèche d'ouverture externe et effet de hover lilas lumineux.
+   - Intégration discrète et élégante du badge GitHub dans le pied de page (`footer-inner`) sur toutes les pages du site.
+4. **Refonte & Perfectionnement Responsive Multi-Écrans** :
+   - **Écrans ultra-compacts (<= 400px : iPhone SE, Galaxy A, etc.)** : En-tête capsule adapté sans débordement, carrousel redimensionné (`height: 395px`, `media: 190px`) avec marges ajustées, zéro rognage de texte, grille d'illustrations fluide sur 2 colonnes.
+   - **Mobiles standards (<= 640px)** : Espacements adaptés, champs de formulaire calibrés à `16px` minimum (élimination du zoom indésirable iOS Safari), suppression des débordements horizontaux.
+   - **Tablettes (<= 960px)** : Transition naturelle des grilles en 1 colonne, ajustement des angles 3D des cartes carrousel latérales.
+   - **Gestes tactiles mobile** : Détection intelligente du swipe horizontal (priorité au défilement vertical naturel sans saut accidentel de carte).
+5. **Restauration Intégrale de la Charte Graphique Horizen** :
    - Reprise exacte du conteneur `.details-container` et de ses diapositives en fond blanc pur (`.full-width-img-container`).
    - Déroulement fluide au clic sur le bandeau dégradé lilas.
    - Bouton de refermeture interactif (« Refermer la charte graphique » avec `closeCharte()`) qui replie le panneau et replace la vue au sommet.

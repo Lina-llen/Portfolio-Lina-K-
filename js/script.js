@@ -47,7 +47,7 @@ function initCustomCursor() {
   renderCursor();
 
   const interactiveSelector = 'a, button, input, textarea, summary, .carousel-card, .gallery-card-item, .mockup-display, .logo-card, .browser-content, .close-charte-btn';
-  
+
   function attachHoverListeners() {
     const interactives = document.querySelectorAll(interactiveSelector);
     interactives.forEach((el) => {
@@ -225,20 +225,26 @@ function initCarousel3D() {
   });
 
   let startX = 0;
+  let startY = 0;
   let endX = 0;
+  let endY = 0;
 
   track.addEventListener('touchstart', (e) => {
     startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
   }, { passive: true });
 
   track.addEventListener('touchend', (e) => {
     endX = e.changedTouches[0].clientX;
-    const diff = startX - endX;
-    if (Math.abs(diff) > 45) {
-      if (diff > 0) nextSlide();
-      else prevSlide();
-    }
-  }, { passive: true });
+      endY = e.changedTouches[0].clientY;
+      const diffX = startX - endX;
+      const diffY = startY - endY;
+      // Ne déclencher le slide que si le geste est principalement horizontal
+      if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+        if (diffX > 0) nextSlide();
+        else prevSlide();
+      }
+    }, { passive: true });
 
   updateCarousel();
 }
@@ -246,7 +252,7 @@ function initCarousel3D() {
 /* --------------------------------------------------------------------------
    4. FONCTION POUR FERMER LA CHARTE GRAPHIQUE HORIZEN
    -------------------------------------------------------------------------- */
-window.closeCharte = function() {
+window.closeCharte = function () {
   const details = document.getElementById('charte-details');
   if (!details) return;
   details.removeAttribute('open');
@@ -263,13 +269,13 @@ function initLightbox() {
 
   if (!lightbox || !lightboxImg) return;
 
-  window.openInLightbox = function(imageSrc) {
+  window.openInLightbox = function (imageSrc) {
     lightboxImg.src = imageSrc;
     lightbox.classList.add('is-open');
     document.body.style.overflow = 'hidden';
   };
 
-  window.closeLightbox = function() {
+  window.closeLightbox = function () {
     lightbox.classList.remove('is-open');
     document.body.style.overflow = '';
     setTimeout(() => {
